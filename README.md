@@ -26,13 +26,13 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 - VS1053 library by baldram (https://github.com/baldram/ESP_VS1053_Library)
 
 ## Instructions:
--Build the hardware
--Set the station in this file
--Upload the program
+- Build the hardware
+- Set the station in this file
+- Upload the program
 
 ## IDE Settings (Tools):
--IwIP Variant: v1.4 Higher Bandwidth
--CPU Frequency: 160Hz
+- IwIP Variant: v1.4 Higher Bandwidth
+- CPU Frequency: 160Hz
 
 ## License:
 
