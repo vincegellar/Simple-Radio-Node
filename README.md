@@ -25,6 +25,7 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 |   DCS   |   D0    |    -     |
 |   DREQ  |   D3    |    -     |
 |   5V    |    -    |   VCC    |
+|   5V    |    -    |   VCC    |
 |   GND   |    -    |   GND    |
 
 ## Dependencies
