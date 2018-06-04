@@ -34,6 +34,8 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 -IwIP Variant: v1.4 Higher Bandwidth
 -CPU Frequency: 160Hz
 
+## License:
+
 Simple Radio Node: a single station easy to use web radio.
     Copyright (C) 2018  Vince Gellár (gellar.vince@gmail.com)
 
