@@ -7,6 +7,11 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 - ESP8266 NodeMCU
 - VS1053 MP3 Decoder Breakout Board
 - PAM8304 Class-D Amplifier
+- 2x 3W 4Ohm or 8Ohm Speakers
+- 5V 3A Power Supply
+- 47uF Capacitor
+- Switch
+- Some Wire
 
 ## Wiring
 
