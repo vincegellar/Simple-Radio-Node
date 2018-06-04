@@ -32,11 +32,10 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 |   SCK   |   D5    |    -     |
 |   MISO  |   D6    |    -     |
 |   MOSI  |   D7    |    -     |
-|   XRST  |    -    |    -     |
+|   RST   |    -    |    -     |
 |   CS    |   D1    |    -     |
 |   DCS   |   D0    |    -     |
 |   DREQ  |   D3    |    -     |
-|   5V    |    -    |   VCC    |
 |   5V    |    -    |   VCC    |
 |   GND   |    -    |   GND    |
 
