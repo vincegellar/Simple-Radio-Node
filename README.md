@@ -13,6 +13,18 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 - Switch
 - Some Wire
 
+## Dependencies
+- VS1053 library by baldram (https://github.com/baldram/ESP_VS1053_Library)
+
+## Instructions:
+- Build the hardware
+- Set the station in this file
+- Upload the program
+
+## IDE Settings (Tools):
+- IwIP Variant: v1.4 Higher Bandwidth
+- CPU Frequency: 160Hz
+
 ## Wiring
 
 | VS1053  | ESP8266 |  Other   |
@@ -28,17 +40,7 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 |   5V    |    -    |   VCC    |
 |   GND   |    -    |   GND    |
 
-## Dependencies
-- VS1053 library by baldram (https://github.com/baldram/ESP_VS1053_Library)
-
-## Instructions:
-- Build the hardware
-- Set the station in this file
-- Upload the program
-
-## IDE Settings (Tools):
-- IwIP Variant: v1.4 Higher Bandwidth
-- CPU Frequency: 160Hz
+![Schematic](https://github.com/vincegellar/Simple-Radio-Node/blob/master/Images/sr_node.png)
 
 ## License:
 
