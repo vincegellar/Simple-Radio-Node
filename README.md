@@ -18,7 +18,8 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 
 ## Instructions:
 - Build the hardware
-- Set the station in this file
+- Set the station
+- Set your Wi-Fi SSID and password
 - Upload the program
 
 ## IDE Settings (Tools):
