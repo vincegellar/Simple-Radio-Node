@@ -38,6 +38,8 @@
 #define VS1053_DCS    D0
 #define VS1053_DREQ   D3
 
+#define VOLUME_KNOB   A0
+
 // Default volume (will add setting later)
 #define VOLUME  90
 
@@ -54,6 +56,7 @@ int httpPort = 8563;
 
 uint8_t mp3buff[32];
 int loopcounter = 0;
+int currentvolume = VOLUME;
 
 void setup () {
     Serial.begin(115200);
@@ -100,8 +103,22 @@ void setup () {
 }
 
 void loop() {
+    ++loopcounter;
+  
     if(client.available() > 0){
       uint8_t bytesread = client.read(mp3buff, 32);
       player.playChunk(mp3buff, bytesread);
+    }
+
+    if(loopcounter >= 200){
+      loopcounter = 0;
+      int volume = analogRead(VOLUME_KNOB);
+      int newvolume = (1.0*volume / 115)*100;
+      if(3 < abs(currentvolume - newvolume)){
+        Serial.print("Volume changed to: ");
+        Serial.println(newvolume);
+        currentvolume = newvolume;
+        player.setVolume(newvolume);
+      }
     }
 }
