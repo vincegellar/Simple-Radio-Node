@@ -11,7 +11,10 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 - 5V 3A Power Supply
 - 47uF Capacitor
 - Switch
-- Some Wire
+- 47k Ohm Resistor
+- 10k Ohm Resistor
+- 10k Trim Potentiometer
+- Wire
 
 ## Dependencies
 - VS1053 library by baldram (https://github.com/baldram/ESP_VS1053_Library)
@@ -27,7 +30,6 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 - CPU Frequency: 160Hz
 
 ## Wiring
-
 | VS1053  | ESP8266 |  Other   |
 |---------|---------|----------|
 |   SCK   |   D5    |    -     |
@@ -39,6 +41,10 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 |   DREQ  |   D3    |    -     |
 |   5V    |    -    |   VCC    |
 |   GND   |    -    |   GND    |
+
+**_To avoid noise caused by the power supply and the jack connector creating a ground loop, solder a 47uF capacitor onto the PAM8403's VREF pin, and connect it to the jack connector's ground._**
+
+**_The volume control uses a 47k Ohm resistor from the 3.3V line, then a 10k Ohm resistor to the NodeMCU's ground._**
 
 ![Schematic](https://github.com/vincegellar/Simple-Radio-Node/blob/master/Images/sr_node.png)
 
