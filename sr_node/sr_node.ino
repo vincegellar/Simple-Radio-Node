@@ -110,7 +110,7 @@ void loop() {
       player.playChunk(mp3buff, bytesread);
     }
 
-    if(loopcounter >= 200){
+    if(loopcounter >= 1000){
       loopcounter = 0;
       int volume = analogRead(VOLUME_KNOB);
       int newvolume = (1.0*volume / 115)*100;
