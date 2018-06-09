@@ -63,7 +63,7 @@ void setup () {
 
     // Wait for VS1053 and PAM8403 to power up
     // otherwise the system might not start up correctly
-    delay(2000);
+    delay(3000);
 
     // This can be set in the IDE no need for ext library
     // system_update_cpu_freq(160);
@@ -104,17 +104,28 @@ void setup () {
 
 void loop() {
     ++loopcounter;
+
+    if(!client.connected()){
+      Serial.println("Reconnecting...");
+      if(client.connect(host, httpPort)){
+        client.print(String("GET ") + path + " HTTP/1.1\r\n" +
+                  "Host: " + host + "\r\n" + 
+                  "Connection: close\r\n\r\n");
+      }
+    }
   
     if(client.available() > 0){
       uint8_t bytesread = client.read(mp3buff, 32);
       player.playChunk(mp3buff, bytesread);
     }
 
-    if(loopcounter >= 1000){
+    if(loopcounter >= 300){
       loopcounter = 0;
       int volume = analogRead(VOLUME_KNOB);
-      int newvolume = (1.0*volume / 115)*100;
+      int newvolume = (1.0*volume / 111)*100;
       if(3 < abs(currentvolume - newvolume)){
+        if(100 < newvolume)
+          newvolume = 100;
         Serial.print("Volume changed to: ");
         Serial.println(newvolume);
         currentvolume = newvolume;
