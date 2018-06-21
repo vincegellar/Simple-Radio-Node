@@ -26,7 +26,7 @@ A simple NodeMCU based internet radio receiver dedicated to my family. It is har
 - Upload the program
 
 ## IDE Settings (Tools):
-- IwIP Variant: v1.4 Higher Bandwidth
+- IwIP Variant: v2.0 Higher Bandwidth
 - CPU Frequency: 160Hz
 
 ## Wiring

@@ -63,7 +63,7 @@ void setup () {
 
     // Wait for VS1053 and PAM8403 to power up
     // otherwise the system might not start up correctly
-    delay(3000);
+    delay(5000);
 
     // This can be set in the IDE no need for ext library
     // system_update_cpu_freq(160);
