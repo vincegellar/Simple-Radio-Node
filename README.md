@@ -1,7 +1,7 @@
 # Simple Radio Node
 
 ## About
-A simple NodeMCU based internet radio receiver dedicated to my family. It is hardcoded to a single station. Just turn on and listen.
+A simple ESP8266 NodeMCU and VS1053 based internet radio receiver dedicated to my family. It is hardcoded to a single station. Just turn on and listen.
 
 ## Parts List
 - ESP8266 NodeMCU
